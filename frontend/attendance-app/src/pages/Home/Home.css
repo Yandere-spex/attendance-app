@@ -1,0 +1,110 @@
+.home-div-main {
+    background-image: url('../../assets/backgroundAttendance.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+/* Dark overlay */
+.home-div-main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+/* TEXT ONLY ANIMATION */
+.home-h1 {
+    position: relative;
+    z-index: 2;
+    color: rgba(198, 241, 175, 1);
+    font-size: 7rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin: 0;
+    letter-spacing: 2px;
+    
+    /* SMOOTH TEXT APPEAR */
+    opacity: 0;
+    transform: translateY(30px);
+    animation: textSlideIn 0.8s ease-out 0.2s forwards;
+}
+.home-h2 {
+    position: relative;
+    z-index: 2;
+    color: rgba(2, 37, 43, 1);
+    font-size: 7rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin: 0;
+    letter-spacing: 2px;
+    
+    /* SMOOTH TEXT APPEAR */
+    opacity: 0;
+    transform: translateY(30px);
+    animation: textSlideIn 0.8s ease-out 0.2s forwards;
+}
+@keyframes textSlideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .home-div-main h1 { font-size: 2.5rem; letter-spacing: 1px; }
+}
+@media (max-width: 480px) {
+    .home-div-main h1 { font-size: 2rem; padding: 0 20px; }
+}
+
+.home-nav {
+    position: absolute;     /* Position relative to parent */
+    top: 2rem;              /* 2rem from top */
+    right: 2rem;            /* 2rem from right */
+    width: 150px;
+
+    padding: 0.75rem 1.75rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    z-index: 10;           /* Above overlay */
+    margin: 0;
+    cursor: pointer;
+}
+
+/* Second button stacks below first */
+.home-nav:nth-child(2) {
+    top: 5rem;  /* Slightly lower */
+}
+
+/* Hover Effects */
+.home-nav:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.6);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+}
