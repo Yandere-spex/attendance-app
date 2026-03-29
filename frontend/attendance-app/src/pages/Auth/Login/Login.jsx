@@ -50,9 +50,10 @@ export default function Login() {
   return (
  
       <div className="login-container">
-        <h1>Attendance</h1>
-        <h1>Management</h1>
-        <h1>System</h1>
+        <span className='h1-attendance'>Attendance</span>
+        <span className='h1-management'>Management</span>
+        <span className='h1-system'>System</span>
+        
         <div className="login-card">
           <h1 className="login-title">Login</h1>
           <p className="login-subtitle">Welcome Back</p>
