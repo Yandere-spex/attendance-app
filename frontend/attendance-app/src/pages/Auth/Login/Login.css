@@ -1,0 +1,170 @@
+/* Main container */
+.login-div-main {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Background */
+.login-container {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  background-image: url('../../../assets/backgroundAttendance.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 1rem;
+}
+
+/* Glass Card */
+.login-card {
+
+    background:  linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+    border-radius: 24px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    padding: 3rem;
+    width: 100%;
+    max-width: 450px;
+
+    border: 2px solid white;
+    backdrop-filter: blur(10px); 
+
+
+
+
+    position: relative;
+    z-index: 2;
+}
+
+/* Title */
+.login-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: rgba(192, 255, 239, 1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.login-subtitle {
+  color: rgba(192, 255, 239, 1);
+  font-size: 1.125rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Form */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Form Group */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label.label-input {
+  font-weight: 600;
+  color: rgba(192, 255, 239, 1);
+  font-size: 0.95rem;
+}
+
+/* Inputs */
+.form-group input {
+  padding: 1rem 1.25rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  background: rgba(0, 0, 0, 0.2);
+  color: #1f2937;
+}
+
+/* PLACEHOLDER COLOR */
+.form-group input::placeholder {
+  color: rgba(192, 255, 239, 1) !important;
+  opacity: 1;
+}
+
+/* Focus */
+.form-group input:focus {
+  outline: none;
+  border-color: rgba(192, 255, 239, 1);
+  box-shadow: 0 0 0 3px rgba(192, 255, 239, 0.1);
+}
+
+/* Error */
+.form-group input.error {
+  border-color: #ef4444;
+}
+
+.error-text {
+  color: #ef4444;
+  font-size: 0.875rem;
+}
+
+/* Submit Button */
+.submit-btn {
+  padding: 1.25rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+  background: linear-gradient(135deg, rgba(192, 255, 239, 0.9), rgba(192, 255, 239, 0.7));
+  color: #1f2937;
+  border: 2px solid rgba(192, 255, 239, 1);
+}
+
+.submit-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(192, 255, 239, 0.4);
+}
+
+.submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Footer */
+.form-footer {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.link {
+  color: rgba(192, 255, 239, 1);
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: 0.25rem;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .login-card {
+    padding: 2rem 1.5rem;
+    margin: 1rem;
+  }
+}

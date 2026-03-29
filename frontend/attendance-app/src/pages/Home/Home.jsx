@@ -10,7 +10,7 @@ export default function Home() {
             <div className="home-div-main">
                 
                 <Link to="/login" className='home-nav'>Login</Link>
-                <Link to="/register" className='home-nav'>Register</Link>
+                <Link to="/signup" className='home-nav'>Signup</Link>
 
                 <h1 className='home-h1'>Attendance </h1>
                 <h1 className='home-h1'>Management</h1>
